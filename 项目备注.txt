@@ -4,6 +4,14 @@
 
 
 
+ 解决 OpenSSL SSL_read: Connection was aborted, errno 10053 报错
+
+git config --global http.sslVerify "false"
+
+
+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
+
+
 
 
 前台

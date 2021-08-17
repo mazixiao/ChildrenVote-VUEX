@@ -6,6 +6,7 @@ import Router from 'vue-router'
 
 import index from '@/views/index'
 import commitRecord from '@/views/commitRecord'
+import father from '@/views/father'
 
 
 Vue.use(Router)
@@ -28,7 +29,17 @@ export default new Router({
       meta: {
 				title: '儿童节投票'
 			}
-    }
+    },
+    {
+      path: '/father',
+      name: 'father',
+      component: father,
+      meta: {
+				title: 'father'
+			}
+    },
+
+
   ]
 })
 

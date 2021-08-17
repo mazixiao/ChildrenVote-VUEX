@@ -101,7 +101,7 @@ const store = new Vuex.Store({
     getWxCode(state) {
 
 
-      if (isWechat()) {
+      // if (isWechat()) {
         state.notWeChat = false;
       // 获取微信code
       let code = getUrlParam('code');
@@ -110,25 +110,25 @@ const store = new Vuex.Store({
       // /-----------------------------------------------------------------------
 
 
-      // state.openid = "oOEgp02xCQIBdVALe3f81wdwOiBY";
-      // // 更据OpenId获取用户信息(105)
-      // updateOpenId({
-      //   openid: state.openid
-      // }).then((response) => {
-      //   console.log(response.data, "更据OpenId获取用户信息(105)00-vuex");
+      state.openid = "oOEgp02xCQIBdVALe3f81wdwOiBY";
+      // 更据OpenId获取用户信息(105)
+      updateOpenId({
+        openid: state.openid
+      }).then((response) => {
+        console.log(response.data, "更据OpenId获取用户信息(105)00-vuex");
 
-      //   if (response.data.ReturnCode == 0) {
-      //     state.userid = response.data.Data[0].id;
-      //     state.username = response.data.Data[0].username;
-      //     state.votenum = response.data.Data[0].votenum;
-      //     state.amount = response.data.Data[0].amount;
-      //     router.push({
-      //       path: "/commitRecord",
-      //     });
-      //   } 
-      // });
+        if (response.data.ReturnCode == 0) {
+          state.userid = response.data.Data[0].id;
+          state.username = response.data.Data[0].username;
+          state.votenum = response.data.Data[0].votenum;
+          state.amount = response.data.Data[0].amount;
+          router.push({
+            path: "/commitRecord",
+          });
+        } 
+      });
 
-      // return;
+      return;
 
       // /-----------------------------------------------------------------------
 
@@ -174,10 +174,10 @@ const store = new Vuex.Store({
 
       // 重定向获取code
       this.commit("getWxCodeRedirect");
-      } else {
-        // 不是用微信打开链接
-        state.notWeChat = true;
-      }
+      // } else {
+      //   // 不是用微信打开链接
+      //   state.notWeChat = true;
+      // }
     },
   },
   // Action 类似于 mutation，不同在于：
