@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@import 'public';
+
+
+img {
+    max-width: 100%;
+}
+
+img[src=''],img:not([src]){
+    opacity: 0;
+}
+
+.isWechatBrowser {
+    font-size: 20px;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+// placeholder
+input::-webkit-input-placeholder{
+    opacity: 0.7;
+    color: #111111;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    opacity: 0.7;
+    color: #111111;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    opacity: 0.7;
+    color: #111111;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    opacity: 0.7;
+    color: #111111;
+}
+
+
+textarea::-webkit-input-placeholder{
+    opacity: 0.7;
+    color: #111111;
+}
+textarea::-moz-placeholder{   /* Mozilla Firefox 19+ */
+    opacity: 0.7;
+    color: #111111;
+}
+textarea:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+    opacity: 0.7;
+    color: #111111;
+}
+textarea:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+    opacity: 0.7;
+    color: #111111;
+}
+
+
+
+.fade-enter-active, .fade-leave-active {
+    transition: all 0.3s ease;
+}
+
+
+.fade-enter, .fade-leave-to {
+    opacity: 0;
+}
